@@ -1,0 +1,31 @@
+<br />
+
+<%= link_to("<< Back to List", subjects_path, :class => 'back-link') %>
+
+<div class="subjects delete">
+  <h2>Delete Subject</h2>
+
+  <%= form_for(@subject, :method => 'delete') do |f| %>
+
+  <p>Are you sure you want to delete this subject?</p>
+  <table summary="Subject to delete">
+    <tr>
+      <th>Name</th>
+      <td><%= @subject.name %></td>
+    </tr>
+    <tr>
+      <th>Position</th>
+      <td><%= @subject.position %></td>
+    </tr>
+    <tr>
+      <th>Visible?</th>
+      <td><%= @subject.visible ? 'true' : 'false' %></td>
+    </tr>
+  </table>
+
+    <div class="form-buttons">
+      <%= f.submit("Delete Subject") %>
+    </div>
+
+  <% end %>
+</div>

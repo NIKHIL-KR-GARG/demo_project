@@ -1,0 +1,21 @@
+<h1>Hello World</h1>
+
+<h2>"Testing ERB code"</h2>
+
+<h2>"Test:1"</h2>
+<%= 5+5 %>
+
+<h2>"Test:2"</h2>
+<% targetnumber = 20 %>
+<% targetname = 'Nikhil'%>
+<%= "#{targetname} And #{targetnumber}" %>
+
+<h2>"Test:3"</h2>
+<% 3.times do |n| %>
+  <p><%= n %></p>
+<% end %>
+
+<h2>"Test:3"</h2>
+<% @array.each do |n| %>
+  <p><%= n %></p>
+<% end %>
